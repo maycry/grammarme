@@ -1,4 +1,6 @@
 Grammarme::Application.routes.draw do
+  resources :tasks
+
   get "task/home"
 
   # The priority is based upon order of creation:

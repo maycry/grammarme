@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  reference: MyText
+  tasktext: MyText
+  rule: MyText
+  encourag: MyText
+  badgepath: MyString
+  badgetext: MyText
+
+two:
+  reference: MyText
+  tasktext: MyText
+  rule: MyText
+  encourag: MyText
+  badgepath: MyString
+  badgetext: MyText

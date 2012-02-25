@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<div id="container">
+    <div id="msg" style="display:none"><p>Burb</p></div>
+    <div id="main" contenteditable="true" autocomplete="off">
+      <h1><%= raw @task.tasktext %></h1>
+    </div>
+    <div id="correct" style="display:none"><h2>Correct</h2><%= link_to("Next →", @task.next_task) if @task.next_task %></div>
+    </div>
+</div>
+<%= javascript_tag do %>
+  window.referencetext = "<%=j @task.reference %>";
+<% end %>
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
