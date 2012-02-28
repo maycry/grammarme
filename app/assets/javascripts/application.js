@@ -7,4 +7,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require logic
+//= require jsdiff
 //= require_tree .

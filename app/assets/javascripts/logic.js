@@ -1,31 +1,45 @@
  $(function() {
-      var animlen = 50;
+      var animateTime = 50;
       var string = referencetext;
+
       function anim(){
         var txt = $('#msg');
-        txt.fadeIn(animlen).fadeOut(animlen);
-        //$('#msg').text($('#main').html());
+        txt.fadeIn(animateTime).fadeOut(animateTime);
       }
-        $("#main").bind('focus', function() {
-          anim();
-        });
 
-        $("#main").bind('keyup', function() {
-          anim();
-          var current = $('#main').text();
+      function count_mistakes(){
+        var current = $('#tasktext').text();
+        return diffString(current,string);
+      }
+      $('#mistakes').html(count_mistakes());
 
-          if($.trim(current) == string){
-            $("#correct").show();
-            $(this).blur();
-          }
-        });
-        $("#main").bind('blur', function() {
-          anim();
-        });
-        $(".red").bind('mouseover', function() {
-          $(this).animate({opacity: 0.25},200);
-        });
-        $(".red").bind('mouseout', function() {
-          $(this).animate({opacity: 1},200);
-        });
+      $("#tasktext").bind('focus', function() {
+        anim();
       });
+
+      $("#tasktext").bind('blur', function() {
+        anim();
+      });
+
+      $("#tasktext").bind('keyup', function() {
+        anim();
+        mis = count_mistakes();
+        $('#mistakes').html(mis);
+        if(mis == 0){
+          $("#correct").show();
+          $(this).blur();
+        }
+
+      });
+
+
+
+
+
+      $(".red").bind('mouseover', function() {
+        $(this).animate({opacity: 0.25},200);
+      });
+      $(".red").bind('mouseout', function() {
+        $(this).animate({opacity: 1},200);
+      });
+    });
