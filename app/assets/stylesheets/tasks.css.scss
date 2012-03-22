@@ -1,3 +1,21 @@
-// Place all the styles related to the Tasks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#wrapper{
+	@include centerBlock;
+}
+.taskText{
+	font-size:32px;
+	line-height:38px;
+	margin-top:220px;
+	outline:none;
+}
+.mistakeCounter{
+	font-size:14px;
+	margin-top:70px;
+}
+.mistakeCounter:before{
+	content:" ";
+	margin-left:-28px;
+	background:transparent url(asset-path("mistakeCounterArrow.png", image)) no-repeat;
+	display: inline-block;
+	width:25px;
+	height:9px;
+}

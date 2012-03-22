@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<div id="container">
-    <div id="msg" style="display:none"><p>Burb</p></div>
-    <div id="tasktext" contenteditable="true" autocomplete="off">
-      <h1><%= raw @task.tasktext %></h1>
-      <p><span id="mistakes"></span> mistakes left</p>
-    </div>
-    
-    <div id="correct" style="display:none"><h2><%= @task.encourag %></h2><%= link_to("Next →", @task.next_task) if @task.next_task %>
-    </div>
+<div id="wrapper">
+  <div class="taskText" contenteditable="true" autocomplete="off">
+    <%= raw @task.tasktext %>
+  </div>
+  <p class="mistakeCounter"><span></span> mistakes left</p>
+  
+  <div id="correct" style="display:none"><h2><%= @task.encourag %></h2><%= link_to("Next →", @task.next_task) if @task.next_task %>
+  </div>
 <%= javascript_tag do %>
   window.referencetext = "<%=j @task.reference %>";
 <% end %>
