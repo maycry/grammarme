@@ -1,0 +1,15 @@
+%p#notice= notice
+#wrapper
+  .taskText{autocomplete: "off", contenteditable: "true"}
+    = raw @task.tasktext
+  %p.mistakeCounter
+    %span.mistakeCount
+    left
+  #correct{style: "display:none"}
+    %h2= @task.encourag
+    = link_to("Next →", @task.next_task) if @task.next_task
+  = javascript_tag do
+    window.referencetext = "#{j @task.reference}";
+  = link_to 'Edit', edit_task_path(@task)
+  |
+  = link_to 'Back', tasks_path
