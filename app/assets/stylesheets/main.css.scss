@@ -1,16 +1,16 @@
 @mixin centerBlock {
- 	width:500px;
-	margin:0 auto;
+ 	width: 500px;
+	margin: 0 auto;
 }
 body{
-	background-color:#f1f1f1;
-	font:16px/20px "PT Serif", serif;
+	background-color: #f1f1f1;
+	font: 16px/20px "PT Serif", serif;
 }
 header{
-	width:100%;
-	height:47px;
+	width: 100%;
+	height: 47px;
 	@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.35), inset 0 4px 2px hsla(0, 0%, 0%, 0.15));
-	background-color:#373737;
+	background-color: #373737;
 	position: fixed;
 	top: 0;
 }
@@ -22,13 +22,32 @@ header{
 		#logo{
 			color: #fff;
 			line-height: 2.88em;
+			cursor: default;
 		}
 	}
 .tasksRibbon{
-	width:54px;
+	width: 54px;
 	height: 83px;
-	float:right;
-	margin-right:-7px;
-	background:transparent url(asset-path("tasksRibbon.png", image)) no-repeat;
-
+	float: right;
+	margin-right: -7px;
+	background: transparent url(asset-path("tasksRibbon.png", image)) no-repeat;
+	color: #fff;
+	text-align: center;
+	cursor: default;
 }
+.tasksRibbon .tasksHeader__tasksRibbon{
+	font-size: 9px;
+	letter-spacing: 1px;
+	margin-top: 13px;
+	line-height: 14px;
+}
+.tasksRibbon .taskCount__tasksRibbon{
+	font-size: 12px;
+	.tasksSlash__tasksRibbon{
+		vertical-align: -2px;
+	}
+	.tasksNumber__tasksRibbon{
+		vertical-align: -6px;
+	}
+}
+

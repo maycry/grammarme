@@ -12,10 +12,10 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
-    logger.debug cookies[:_grammarme_session]
 
     respond_to do |format|
       format.html # show.html.erb
+      format.js
       format.json { render json: @task }
     end
   end
