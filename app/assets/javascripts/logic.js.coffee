@@ -30,5 +30,8 @@ jQuery ->
     output_mistakes()
     #Check if all mistakes corrected
     if mis == 0
-      $('#correct').show()
+      $('#correct').fadeIn()
+      $('.nextBtn').fadeIn()
+      $('.mistakeCounter').fadeOut()
+      $('.taskAuthor').fadeIn()
       $(this).blur()

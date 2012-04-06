@@ -2,11 +2,13 @@
 #wrapper
   .taskText{autocomplete: "off", contenteditable: "true"}
     = render 'nextTaskText'
-  %p.mistakeCounter
+  .taskAuthor{style: "visibility: hidden"}
+    = @task.author
+  .mistakeCounter
     %span.mistakeCount
     left
+  = link_to("NEXT", @task.next_task, remote: true, class: 'nextBtn', style: "display:none") if @task.next_task
   #correct{style: "display:none"}
     %h2= @task.encourag
-    = link_to("Next →", @task.next_task, remote: true) if @task.next_task
   = javascript_tag do
     window.referencetext = "#{j @task.reference}";

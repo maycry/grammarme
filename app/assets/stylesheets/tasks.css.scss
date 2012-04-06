@@ -2,21 +2,56 @@
 	@include centerBlock;
 }
 .taskText{
-	font-size:32px;
-	line-height:38px;
-	margin-top:220px;
-	outline:none;
+	font-size: 32px;
+	line-height: 38px;
+	margin-top: 220px;
+	outline: none;
+}
+.taskAuthor{
+	display:block;
+	width:100%;
+	height:20px;
+	font-size:14px;
+	font-style:italic;
+	margin-top:15px;
+	margin-left: -15px;
+}
+.taskAuthor::before{
+	content: '\2014\a0';
 }
 .mistakeCounter{
-	font-size:14px;
-	margin-top:70px;
+	font-size: 14px;
+	margin-top: 48px;
 	cursor: default;
+	float:left;
 }
-.mistakeCounter:before{
-	content:" ";
-	margin-left:-28px;
-	background:transparent url(asset-path("mistakeCounterArrow.png", image)) no-repeat;
+.mistakeCounter::before{
+	content: " ";
+	margin-left: -28px;
+	background: transparent url(asset-path("mistakeCounterArrow.png", image)) no-repeat;
 	display: inline-block;
-	width:25px;
-	height:9px;
+	width: 25px;
+	height: 9px;
+}
+.nextBtn{
+	background:transparent url(asset-path("nextBtn.png", image)) no-repeat;
+	width: 88px;
+	height: 35px;
+	display: block;
+	color: #549bbc;
+	text-decoration: none;
+	line-height: 34px;
+	padding-left: 14px;
+	letter-spacing: 2px;
+	float: right;
+	margin-top: 39px;
+	&:hover{
+		color: #549bbc;
+	}
+}
+#correct{
+	margin-top: 47px;
+	h2{
+		font-size:19px;
+	}
 }
