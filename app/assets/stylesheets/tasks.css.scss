@@ -4,7 +4,7 @@
 .taskText{
 	font-size: 32px;
 	line-height: 38px;
-	margin-top: 220px;
+	margin-top: 260px;
 	outline: none;
 }
 .taskAuthor{
@@ -33,6 +33,9 @@
 	width: 25px;
 	height: 9px;
 }
+.endConatiner{
+	margin-top: 39px;
+}
 .nextBtn{
 	background:transparent url(asset-path("nextBtn.png", image)) no-repeat;
 	width: 88px;
@@ -44,7 +47,7 @@
 	padding-left: 14px;
 	letter-spacing: 2px;
 	float: right;
-	margin-top: 39px;
+	margin-top: -4px;
 	&:hover{
 		color: #549bbc;
 	}

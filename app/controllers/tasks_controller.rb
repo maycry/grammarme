@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  http_basic_authenticate_with :name => "frodo", :password => "thering", except: :show
+  http_basic_authenticate_with :name => "maycry", :password => "inferno", except: :show
 
   def index
     @tasks = Task.all

@@ -1,6 +1,5 @@
 <div class="tasksHeader__tasksRibbon">
 	TASK
-	<div class="taskCount__tasksRibbon"><%= @task.id %><span class="tasksSlash__tasksRibbon">/</span><span class="tasksNumber__tasksRibbon"><%= Task.count %></span>
+	<div class="taskCount__tasksRibbon"><span class="tasksCurrentNumber__tasksRibbon"><%= render 'layouts/currentTaskNumber' %></span><span class="tasksSlash__tasksRibbon">/</span><span class="tasksNumber__tasksRibbon"><%= Task.count %></span>
 	</div>
-</div>	
-	 
+</div>

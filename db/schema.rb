@@ -14,15 +14,15 @@
 ActiveRecord::Schema.define(:version => 20120323103845) do
 
   create_table "tasks", :force => true do |t|
-    t.text      "reference"
-    t.text      "tasktext"
-    t.text      "rule"
-    t.text      "encourag"
-    t.string    "badgepath"
-    t.text      "badgetext"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "author"
+    t.text     "reference"
+    t.text     "tasktext"
+    t.text     "rule"
+    t.text     "encourag"
+    t.string   "badgepath"
+    t.text     "badgetext"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "author"
   end
 
 end

@@ -1,6 +1,0 @@
-var c = $('.taskText');
-c.fadeOut(500);
-
-setTimeout(function(){
-	c.html('<%= escape_javascript(render "nextTaskText")%>').fadeIn();
-}, 500);
