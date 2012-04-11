@@ -3,11 +3,6 @@
 <table>
   <tr>
     <th>Reference</th>
-    <th>Tasktext</th>
-    <th>Rule</th>
-    <th>Encourag</th>
-    <th>Badgepath</th>
-    <th>Badgetext</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,11 +11,6 @@
 <% @tasks.each do |task| %>
   <tr>
     <td><%= task.reference %></td>
-    <td><%= task.tasktext %></td>
-    <td><%= task.rule %></td>
-    <td><%= task.encourag %></td>
-    <td><%= task.badgepath %></td>
-    <td><%= task.badgetext %></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %></td>

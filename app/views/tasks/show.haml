@@ -1,3 +1,4 @@
+= render 'layouts/header'
 %p#notice= notice
 #wrapper
   .taskText{autocomplete: "off", contenteditable: "true"}
@@ -8,7 +9,7 @@
     %span.mistakeCount
     left
   .endContainer{style: "display:none"}
-    = link_to("NEXT", @task.next_task, remote: true, class: 'nextBtn') if @task.next_task
+    = render 'nextBtn'
     #correct
       %h2= @task.encourag
   = javascript_tag do
