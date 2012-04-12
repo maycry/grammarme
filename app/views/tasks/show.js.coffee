@@ -15,3 +15,12 @@ taskFadeIn animTl, ->
 	mis=diffString(window.referencetext, $('.taskText').text())
 	$('.mistakeCount').html(mis + ' ' + plurMis mis)
 
+	$('mistake:first').addClass('active')
+	$('p.errorExpl').html($('mistake:first').attr('data'))
+
+	$('mistake').click ->
+		$('mistake').each ->
+			$(this).removeClass('active')
+		$(this).addClass('active')
+		$('p.errorExpl').html($(this).attr('data'))
+

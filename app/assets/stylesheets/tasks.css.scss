@@ -1,4 +1,4 @@
-$blueLink:#5697c0;
+$blueLink:#549bbc;
 
 #wrapper{
 	@include centerBlock;
@@ -23,6 +23,12 @@ mistake{
 	color:$blueLink;
 	border-bottom:1px dotted $blueLink;
 	cursor:pointer;
+}
+mistake.active{
+	color:#fff;
+	background-color:$blueLink;
+	border-bottom:none;
+	border-radius: 3px;
 }
 .taskAuthor{
 	display:block;
@@ -53,25 +59,60 @@ mistake{
 .endConatiner{
 	margin-top: 39px;
 }
+.errorExplContainer{
+	margin-top: 7px;
+}
 .nextBtn{
 	background:transparent url(asset-path("nextBtn.png", image)) no-repeat;
 	width: 88px;
 	height: 35px;
 	display: block;
-	color: #549bbc;
+	color: $blueLink;
 	text-decoration: none;
 	line-height: 34px;
 	padding-left: 14px;
 	letter-spacing: 2px;
 	float: right;
-	margin-top: -4px;
+	margin-top: -7px;
 	&:hover{
 		color: #549bbc;
 	}
 }
 #correct{
-	margin-top: 47px;
+	margin-top: 44px;
 	h2{
 		font-size:19px;
 	}
+	h4{
+		font-size:14px;
+		margin-bottom:11px;
+	}
+	hr{
+		margin: 23px 0 3px -7px;
+		border-top: 1px solid #DEDEDE;
+		border-bottom: 1px solid #F9F9F9;
+		border-left: none;
+		border-right: none;
+	}
+}
+.errorExplContainer{
+	width:350px;
+}
+.errorExplContainer p.errorExpl{
+	font-size:13px;
+	cite{
+		font-size: 10px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding-left: 2px;
+	}
+}
+.errorExplContainer p.errorExpl::before{
+	content: " ";
+	margin-left: -28px;
+	margin-right: 3px;
+	background: transparent url(asset-path("errorExplArrow.png", image)) no-repeat;
+	display: inline-block;
+	width: 25px;
+	height: 9px;
 }

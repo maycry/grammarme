@@ -37,6 +37,8 @@ jQuery ->
     output_mistakes()
     #Check if all mistakes corrected
     if mis == 0
+      $('mistake:first').addClass('active')
+      $('p.errorExpl').html($('mistake:first').attr('data'))
       #Animation sequence after cpmpleting task
       $('.mistakeCounter').delay(animD).fadeOut(animTm) #hide mistake counter
       $('.taskText').delay(animDelayTTextMoveUp).animate({'margin-top': '220px'}, { duration: animTl, easing: 'easeInOutSine' }).delay(animTl*2).animate({'opacity': '0'}, animTl) #move up text
@@ -46,3 +48,9 @@ jQuery ->
 
       $(this).blur()
       $(this).attr('contenteditable', 'false')
+
+  $('mistake').click ->
+    $('mistake').each ->
+      $(this).removeClass('active')
+    $(this).addClass('active')
+    $('p.errorExpl').html($(this).attr('data'))
