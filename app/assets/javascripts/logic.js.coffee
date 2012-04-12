@@ -39,8 +39,10 @@ jQuery ->
     if mis == 0
       #Animation sequence after cpmpleting task
       $('.mistakeCounter').delay(animD).fadeOut(animTm) #hide mistake counter
-      $('.taskText').delay(animDelayTTextMoveUp).animate({'margin-top': '220px'}, { duration: animTl, easing: 'easeInOutSine' }) #move up text
+      $('.taskText').delay(animDelayTTextMoveUp).animate({'margin-top': '220px'}, { duration: animTl, easing: 'easeInOutSine' }).delay(animTl*2).animate({'opacity': '0'}, animTl) #move up text
+      $('.taskTextHightlighted').delay(animDelayTNextBtnAppear).fadeIn()
       $('.taskAuthor').delay(animDelayTAuthorAppear).animate({opacity: '1'}, animTm) #show author name
       $('.endContainer').delay(animDelayTNextBtnAppear).fadeIn(animTm) #show good, about text, next btn
 
       $(this).blur()
+      $(this).attr('contenteditable', 'false')

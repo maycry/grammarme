@@ -20,8 +20,12 @@
     <%= f.text_area :tasktext %>
   </div>
   <div class="field">
+    <%= f.label :highlighttext %><br />
+    <%= f.text_area :highlighttext %>
+  </div>
+  <div class="field">
     <%= f.label :author %><br />
-    <%= f.text_area :author %>
+    <%= f.text_field :author %>
   </div>
   <div class="field">
     <%= f.label :rule %><br />
@@ -29,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :encourag %><br />
-    <%= f.text_area :encourag %>
+    <%= f.text_field :encourag %>
   </div>
   <div class="field">
     <%= f.label :badgepath %><br />

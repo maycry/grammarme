@@ -1,6 +1,8 @@
 = render 'layouts/header'
 %p#notice= notice
 #wrapper
+  .taskTextHightlighted{style: "display:none"}
+    = render 'nextTaskTextHighlighted'
   .taskText{autocomplete: "off", contenteditable: "true"}
     = render 'nextTaskText'
   .taskAuthor{style: "opacity: 0"}

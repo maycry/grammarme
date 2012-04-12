@@ -1,3 +1,5 @@
+$blueLink:#5697c0;
+
 #wrapper{
 	@include centerBlock;
 }
@@ -6,6 +8,21 @@
 	line-height: 38px;
 	margin-top: 260px;
 	outline: none;
+}
+.taskTextHightlighted{
+	position: absolute;
+	top: 0px;
+	width: 500px;
+	font-size: 32px;
+	line-height: 38px;
+	margin-top: 220px;
+	outline: none;
+	z-index:1;
+}
+mistake{
+	color:$blueLink;
+	border-bottom:1px dotted $blueLink;
+	cursor:pointer;
 }
 .taskAuthor{
 	display:block;
