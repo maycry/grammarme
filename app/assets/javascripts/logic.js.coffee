@@ -32,6 +32,7 @@ jQuery ->
 
   #Count mistake after text edit
   c_taskText.bind 'keyup', -> 
+    $('.hint').delay(animTm).fadeOut(animTm);
     string = referencetext #created by ruby (CDATA)
     mis = count_mistakes()
     output_mistakes()
@@ -54,3 +55,6 @@ jQuery ->
       $(this).removeClass('active')
     $(this).addClass('active')
     $('p.errorExpl').html($(this).attr('data'))
+
+  c_taskText.focus ->
+    $('.bulb').delay(animTm).fadeOut(animTm);

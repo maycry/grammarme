@@ -23,12 +23,16 @@ mistake{
 	color:$blueLink;
 	border-bottom:1px dotted $blueLink;
 	cursor:pointer;
-}
-mistake.active{
+	&:hover{
+		color: lighten($blueLink, 10%);
+	}
+	&.active{
 	color:#fff;
 	background-color:$blueLink;
 	border-bottom:none;
 	border-radius: 3px;
+	cursor:default;
+	}
 }
 .taskAuthor{
 	display:block;
@@ -75,7 +79,8 @@ mistake.active{
 	float: right;
 	margin-top: -7px;
 	&:hover{
-		color: #549bbc;
+		background-position:0 -35px;
+		color: lighten($blueLink, 10%);
 	}
 }
 #correct{
@@ -115,4 +120,11 @@ mistake.active{
 	display: inline-block;
 	width: 25px;
 	height: 9px;
+}
+.hint{
+	position:absolute;
+	z-index:2;
+	width:200px;
+	height: 100px;
+	background: transparent url(asset-path("hint_01.png", image)) no-repeat;
 }

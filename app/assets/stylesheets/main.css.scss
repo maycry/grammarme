@@ -5,6 +5,10 @@
 em{
 	font-style:italic;
 }
+small{
+	font-size:14px;
+	line-height:20px;
+}
 body{
 	background-color: #f1f1f1;
 	font: 16px/20px "PT Serif", serif;
@@ -52,5 +56,38 @@ header{
 	.tasksNumber__tasksRibbon{
 		vertical-align: -6px;
 	}
+}
+.bulb{
+	position: absolute;
+	width: 500px;
+	top:100px;
+	padding: 18px 35px 0px 32px;
+	margin-left: -32px;
+	z-index:1;
+	p{
+		line-height:22px;
+	}
+
+	.b{
+		position: absolute;
+		background:transparent url(asset-path("bulb.png", image));
+		z-index:-1;
+	}
+	.top{
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+	.bottom{
+		bottom: -90px;
+		left: 0px;
+		right: 0px;
+		height: 90px;
+		background-position: bottom left;
+	}
+}
+.red{
+	color:#ca6972;
 }
 

@@ -1,6 +1,8 @@
 = render 'layouts/header'
 %p#notice= notice
 #wrapper
+  .hint{style: 'margin-top: 147px; margin-left: 343px;'}
+  = render 'bulb'
   .taskTextHightlighted{style: "display:none"}
     = render 'nextTaskTextHighlighted'
   .taskText{autocomplete: "off", contenteditable: "true"}
