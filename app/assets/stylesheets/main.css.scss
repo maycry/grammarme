@@ -32,7 +32,7 @@ header{
 			cursor: default;
 		}
 	}
-.tasksRibbon{
+.ribbon{
 	width: 54px;
 	height: 83px;
 	float: right;
@@ -41,22 +41,24 @@ header{
 	color: #fff;
 	text-align: center;
 	cursor: default;
-}
-.tasksRibbon .tasksHeader__tasksRibbon{
+	.ribbonHeader{
 	font-size: 9px;
 	letter-spacing: 1px;
 	margin-top: 13px;
 	line-height: 14px;
-}
-.tasksRibbon .taskCount__tasksRibbon{
-	font-size: 12px;
-	.tasksSlash__tasksRibbon{
-		vertical-align: -2px;
+		.ribbonCounter{
+		font-size: 12px;
+			.ribbonSlash{
+				vertical-align: -2px;
+			}
+			.ribbonNumber{
+				vertical-align: -6px;
+			}
+		}
 	}
-	.tasksNumber__tasksRibbon{
-		vertical-align: -6px;
-	}
 }
+
+
 .bulb{
 	position: absolute;
 	width: 500px;
@@ -67,7 +69,6 @@ header{
 	p{
 		line-height:22px;
 	}
-
 	.b{
 		position: absolute;
 		background:transparent url(asset-path("bulb.png", image));

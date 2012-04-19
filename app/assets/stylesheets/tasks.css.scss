@@ -27,11 +27,11 @@ mistake{
 		color: lighten($blueLink, 10%);
 	}
 	&.active{
-	color:#fff;
-	background-color:$blueLink;
-	border-bottom:none;
-	border-radius: 3px;
-	cursor:default;
+		color:#fff;
+		background-color:$blueLink;
+		border-bottom:none;
+		border-radius: 3px;
+		cursor:default;
 	}
 }
 .taskAuthor{
@@ -42,24 +42,25 @@ mistake{
 	font-style:italic;
 	margin-top:15px;
 	margin-left: -15px;
-}
-.taskAuthor::before{
-	content: '\2014\a0';
+	&::before{
+		content: '\2014\a0';
+	}
 }
 .mistakeCounter{
 	font-size: 14px;
 	margin-top: 48px;
 	cursor: default;
 	float:left;
+	&::before{
+		content: " ";
+		margin-left: -28px;
+		background: transparent url(asset-path("mistakeCounterArrow.png", image)) no-repeat;
+		display: inline-block;
+		width: 25px;
+		height: 9px;
+	}
 }
-.mistakeCounter::before{
-	content: " ";
-	margin-left: -28px;
-	background: transparent url(asset-path("mistakeCounterArrow.png", image)) no-repeat;
-	display: inline-block;
-	width: 25px;
-	height: 9px;
-}
+
 .endConatiner{
 	margin-top: 39px;
 }
@@ -94,10 +95,11 @@ mistake{
 	}
 	hr{
 		margin: 23px 0 3px -7px;
-		border-top: 1px solid #DEDEDE;
-		border-bottom: 1px solid #F9F9F9;
+		border: 1px solid ;
 		border-left: none;
 		border-right: none;
+		border-top-color: #DEDEDE;
+		border-bottom-color: #F9F9F9;
 	}
 }
 .errorExplContainer{

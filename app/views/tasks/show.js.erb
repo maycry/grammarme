@@ -4,23 +4,14 @@ $('.endContainer').fadeOut(animTm)
 window.referencetext = '<%= escape_javascript(@task.reference) %>'
 
 setTimeout(function(){
-	$('.nextBtn').replaceWith('<%= escape_javascript(render "nextBtn")%>')
-	$('.taskText').html('<%= escape_javascript(render "nextTaskText")%>').css('margin-top','260px').attr('contenteditable', 'true').animate({opacity: '1'}, animTm)
-	$('.taskTextHightlighted').html('<%= escape_javascript(render "nextTaskTextHighlighted")%>')
-	$('.tasksCurrentNumber__tasksRibbon').html('<%= escape_javascript(render "layouts/currentTaskNumber") %>').fadeIn()
-	$('.mistakeCounter').fadeIn(animTm) 
-	var mis=diffString(window.referencetext, $('.taskText').text())
-	$('.mistakeCount').html(mis + ' ' + plurMis(mis))
-	$('mistake:first').addClass('active')
-	$('p.errorExpl').html($('mistake:first').attr('data'))
+	$('.nextBtn').replaceWith('<%= escape_javascript(render "nextBtn")%>') // replace href for next link
+	$('.taskText').html('<%= escape_javascript(render "nextTaskText")%>').css('margin-top','260px').attr('contenteditable', 'true').animate({opacity: '1'}, animTm) //update task text
+	$('.taskTextHightlighted').html('<%= escape_javascript(render "nextTaskTextHighlighted")%>') //update error explonations for new task
+	$('.ribbonCurrentNumber').html('<%= escape_javascript(render "layouts/currentTaskNumber") %>') //Change current task number
+	outputMistakes() //update mistaks counter
+	$('.mistakeCounter').fadeIn(animTm) //show mistake counter
 
-	$('mistake').click(function(){
-		$('mistake').each(function(){
-			$(this).removeClass('active')
-			})
-		$(this).addClass('active')
-		$('p.errorExpl').html($(this).attr('data'))
-		})
-	}, animTl)
+  initMistakesExplonation($('mistake:first')) //make first error highlighted
+}, animTl)
 	
 

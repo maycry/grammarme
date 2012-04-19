@@ -6,8 +6,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require logic
 //= require jsdiff
+//= require jquery.easing
+//= require jquery.livequery.min
 //= require_tree .
 document.createElement("article");  
 document.createElement("footer");  
